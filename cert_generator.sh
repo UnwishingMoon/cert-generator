@@ -10,9 +10,7 @@
 #########################################################
 
 # Constants
-WEBSITE="diegocastagna.com"
 SCRIPTNAME="CERT_GENERATOR"
-PREFIX="[$WEBSITE][$SCRIPTNAME]"
 
 # Variables
 domain="${1}"
@@ -21,7 +19,7 @@ CACert="${3}"
 
 # Performing some checks
 if [[ $EUID -ne 0 ]]; then
-    echo "$PREFIX This script must be run as root or with sudo privileges"
+    echo "$SCRIPTNAME This script must be run as root or with sudo privileges"
     exit 1
 fi
 if [ $# -le 2 ]; then
