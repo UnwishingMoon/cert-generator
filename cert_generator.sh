@@ -9,9 +9,6 @@
 #                                                       #
 #########################################################
 
-# Constants
-SCRIPTNAME="CERT_GENERATOR"
-
 # Variables
 domain="${1}"
 CAPrivate="${2}"
@@ -19,7 +16,7 @@ CACert="${3}"
 
 # Performing some checks
 if [[ $EUID -ne 0 ]]; then
-    echo "$SCRIPTNAME This script must be run as root or with sudo privileges"
+    echo "[CERT_GENERATOR] This script must be run as root or with sudo privileges"
     exit 1
 fi
 if [ $# -le 2 ]; then
