@@ -15,8 +15,8 @@ CAPrivate="${2}"
 CACert="${3}"
 
 # Performing some checks
-if [[ $EUID -ne 0 ]]; then
-    echo "[CERT_GENERATOR] This script must be run as root or with sudo privileges"
+if [ $(id -u) -ne 0 ]; then
+    echo "This script must be run as root or with sudo privileges"
     exit 1
 fi
 if [ $# -le 2 ]; then
