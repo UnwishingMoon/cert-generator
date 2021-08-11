@@ -1,6 +1,8 @@
 # cert_generator
 Automatic Certification Authority (CA) and Certificate (Cert) generator
 
+This repository is now read-only aka archived. You should check the [syadmin](https://github.com/UnwishingMoon/sysadmin) repo for the tools
+
 **ca_generator**
 ```
 Usage: filename CAName
